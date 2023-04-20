@@ -16,10 +16,10 @@ spec:
         app: snake-game
     spec:
       containers:
-      - image: ptomar25/snakegame
+      - image: reaywest/snakegame
         name: snake-game
         ports:
-        - containerPort: 3000
+        - containerPort: 8080
 
 
 ---
@@ -33,7 +33,7 @@ spec:
   type: NodePort
   ports:
   - name: snake-game
-    port: 3000
+    port: 8080
   selector:
     app: snake-game
 
